@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Chuzi 🐥</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="site-bg"></div>
+
+    <main class="app">
+
+        <!-- =========================
+     PASSCODE SCREEN
+     ========================= -->
+
+<section class="passcode-screen" id="passcodeScreen">
+
+    <div class="passcode-badge">🔒 RESTRICTED AREA</div>
+
+    <h2>Only Chuzi can enter 🐥</h2>
+
+    <p class="passcode-sub">
+        Type your birthday (date + month) to unlock. 🎂
+    </p>
+
+    <div class="passcode-dots" id="passcodeDots"></div>
+
+    <p class="passcode-error" id="passcodeError"></p>
+
+    <div class="keypad" id="keypad">
+
+        <button class="key" data-value="1">1</button>
+        <button class="key" data-value="2">2</button>
+        <button class="key" data-value="3">3</button>
+
+        <button class="key" data-value="4">4</button>
+        <button class="key" data-value="5">5</button>
+        <button class="key" data-value="6">6</button>
+
+        <button class="key" data-value="7">7</button>
+        <button class="key" data-value="8">8</button>
+        <button class="key" data-value="9">9</button>
+
+        <button class="key key-small" id="keyClear">C</button>
+        <button class="key" data-value="0">0</button>
+        <button class="key key-small" id="keyDelete">⌫</button>
+
+    </div>
+
+</section>
+
+        <section class="intro-screen hidden" id="introScreen">
+
+            <div class="warning">⚠️ WARNING ⚠️</div>
+
+            <h1>Something suspicious is happening...</h1>
+
+            <p class="subtitle">
+                A certain Chuzi has entered Dopey's territory.
+            </p>
+
+            <div class="characters" id="characters">
+
+                <div class="character chick" id="chick">
+                    🐥
+                    <span>CHUZI</span>
+                </div>
+
+                <div class="character dopey" id="dopey">
+                    😵
+                    <span>DOPEY</span>
+                </div>
+
+            </div>
+
+            <div class="dialogue" id="dialogue">
+                Tap Chuzi. 👀 To Know what this chuzi does with Dopey
+            </div>
+
+            <button id="startButton">
+                Tap to investigate 👀
+            </button>
+
+            <button id="continueButton" class="hidden">
+                Okay... continue →
+            </button>
+
+            <p class="hint" id="hint">
+                Don't blame me for what happens next.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             CHUZI FILES SCREEN
+             ========================= -->
+
+        <section class="files-screen hidden" id="filesScreen">
+
+            <div class="files-header">
+
+                <div class="classified">
+                    🔒 CLASSIFIED
+                </div>
+
+                <h2>📁 CHUZI FILES</h2>
+
+                <p>
+                    A highly confidential investigation into
+                    one extremely chaotic human.
+                </p>
+
+            </div>
+
+
+            <div class="file-grid">
+
+                <button class="file-card" id="jokesFile">
+
+                    <div class="file-icon">😂</div>
+
+                    <div>
+                        <h3>Facts About You</h3>
+                        <p>You may know but still I wanna say it bcuz, Hum Hum Hai😎😎.</p>
+                    </div>
+
+                </button>
+
+
+                <button class="file-card" id="memoriesFile">
+
+                    <div class="file-icon">📸</div>
+
+                    <div>
+                        <h3>Memory Archive</h3>
+                        <p>Some moments worth keeping forever.</p>
+                    </div>
+
+                </button>
+
+
+                <button class="file-card" id="chuziFile">
+
+                    <div class="file-icon">🐥</div>
+
+                    <div>
+                        <h3>Chuzi Profile</h3>
+                        <p>Subject under investigation.</p>
+                    </div>
+
+                </button>
+
+
+                <button class="file-card" id="messageFile">
+
+                    <div class="file-icon">💬</div>
+
+                    <div>
+                        <h3>Message</h3>
+                        <p>A message from Dopey.</p>
+                    </div>
+
+                </button>
+
+
+                <button class="file-card secret-file" id="secretFile">
+
+                    <div class="file-icon">🔐</div>
+
+                    <div>
+                        <h3>What's inside</h3>
+                        <p>Wanna Know? 👀👀</p>
+                        <p>Tab the Lock.</p>
+                    </div>
+
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 INSIDE JOKES PANEL
+                 ========================= -->
+
+            <div class="jokes-panel hidden" id="jokesPanel">
+
+                <div class="panel-top">
+
+                    <span>📁 CHUZI FILE #001</span>
+
+                    <button id="closeJokes">
+                        ✕
+                    </button>
+
+                </div>
+
+                <div class="panel-content">
+
+                    <div class="case-stamp">
+                        EVIDENCE FOUND
+                    </div>
+
+                    <h3>😂 Look What I Noticed</h3>
+
+                    <p class="panel-intro">
+                        The following evidence has been recovered
+                        from questionable conversations.
+                    </p>
+
+
+                    <!-- JOKE 1 -->
+
+                    <div class="joke-entry">
+
+                        <div class="joke-number">
+                            #01
+                        </div>
+
+                        <div>
+
+                            <h4>Rotu Bachi</h4>
+
+                            <p>
+                                You can get emotional on anything.. 
+                                like literally on anything and can start crying 
+                                jb k mlm aapku bhi k koi itti badi baat thi nai!!!.. 
+                                and then sb hone baad u laugh at urself 🤣🤣🤣
+                            </p>
+
+                            <span class="evidence">
+                                Eye Withness ME!!
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- JOKE 2 -->
+
+                    <div class="joke-entry">
+
+                        <div class="joke-number">
+                            #02
+                        </div>
+
+                        <div>
+
+                            <h4>ANOTHER is argument</h4>
+
+                            <p>
+                                U can start fighting on any topic and bhale ich wo topic
+                                koi sense nai banata but we can argue on that and at the end 
+                                mai bichara haartu ich anyhow... 🤧🤧🤧
+                            </p>
+
+                            <span class="evidence">
+                                Evidence level: Experienced
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- JOKE 3 -->
+
+                    <div class="joke-entry">
+
+                        <div class="joke-number">
+                            #03
+                        </div>
+
+                        <div>
+
+                            <h4>Honest things</h4>
+
+                            <p>
+                                But honestly, U r the best yro!!... thode nakchade hai but thik
+                                suit hota aap pr wo 🤭🤭🤭.. YOU ARE THE BESTT!!!!
+                            </p>
+
+                            <span class="evidence">
+                                From The Depth of Heart 😌😌
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="file-note">
+                        📌 More evidence may be added before the case is closed.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+<div class="profile-panel hidden" id="profilePanel">
+
+    <div class="profile-top">
+        <span>🔐 CHUZI DOSSIER</span>
+        <button id="closeProfile">✕</button>
+    </div>
+
+    <div class="profile-content">
+
+        <div class="case-stamp">
+            CLASSIFIED FILE
+        </div>
+
+        <h3>🐥 The Chuzi Dossier</h3>
+
+        <p class="panel-intro">
+            Official investigation report on
+            the suspiciously powerful Chuzi.
+        </p>
+
+        <div class="profile-subject">
+
+            <div class="subject-avatar">🐥</div>
+
+            <div>
+                <p class="subject-label">SUBJECT</p>
+                <h4>CHUZI</h4>
+                <p class="threat-level">THREAT LEVEL: HIGH 😭</p>
+            </div>
+
+        </div>
+
+        <div class="profile-buttons">
+
+            <button class="profile-action" id="scanChuzi">
+                🔍 Scan Chuzi
+            </button>
+
+            <button class="profile-action" id="personalityReport">
+                📋 Personality Report
+            </button>
+
+            <button class="profile-action" id="weaknessButton">
+                ⚠️ Reveal Weakness
+            </button>
+
+        </div>
+
+        <div class="profile-result" id="profileResult">
+            <p class="result-placeholder">
+                Select an investigation option above...
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     MESSAGE PANEL
+     ========================= -->
+
+<div class="message-panel hidden" id="messagePanel">
+
+    <div class="message-top">
+        <span>💬 MESSAGE FROM DOPEY</span>
+        <button id="closeMessage">✕</button>
+    </div>
+
+    <div class="message-content">
+
+        <div class="case-stamp">
+            PERSONAL MESSAGE
+        </div>
+
+        <h3>Okay Chuzi... 🐥</h3>
+
+        <div class="message-body">
+            <p>Happy Birthday Bestie!</p>
+            <p>I'm really sorry mai kuch accha sa ya bada surprice to de nai paya and ik agr mai kuch 
+                gift wagera laata bhi to aapki baata pehle suntu tha then aap accept krte... 
+                or krte k bhi k nai idk, but ye ek chotu sa and not too good but still ye ek 
+                page only dedicated to u is a small gift from ur buddy hope ye aapku  
+                accha lage, Nai utta but still thoda sa to lage... thodi si ich shi but smile aaye aapke 
+                face pr to bs bht hai!.
+            </p>
+        </div>
+
+        <p class="message-sign">
+            — Bantya! 😵
+        </p>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     PARTY PANEL
+     ========================= -->
+
+<div class="party-panel hidden" id="partyPanel">
+
+    <div class="party-bg" id="partyBg"></div>
+
+    <div class="banner" id="banner"></div>
+
+    <button class="party-close" id="closeParty">✕</button>
+
+    <div class="party-controls">
+    <button class="party-btn hidden" id="lightBtn">Light the candle 🕯️</button>
+    <button class="party-btn hidden" id="blowBtn">Blow 💨</button>
+    <button class="party-btn hidden" id="giftBtn">One more thing… 🎁</button>
+</div>
+
+<div class="confetti-layer" id="confettiLayer"></div>
+
+    <div class="party-scene" id="partyScene">
+
+        <p class="party-text" id="partyText">
+            Something special is being prepared... 🎂
+        </p>
+
+        <div class="cake" id="cake">
+
+            <div class="layer layer-bottom"></div>
+            <div class="layer layer-mid"></div>
+            <div class="layer layer-top"></div>
+
+            <div class="candle" id="candle">
+                <div class="flame" id="flame"></div>
+            </div>
+
+        </div>
+
+        <div class="knife hidden" id="knife">
+    <div class="knife-handle"></div>
+    <div class="knife-blade"></div>
+</div>
+
+        <div class="table-set">
+            <div class="table-top"></div>
+            <div class="table-cloth"></div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     BIRTHDAY WISH CARD
+     ========================= -->
+
+<div class="gift-panel hidden" id="giftPanel">
+
+    <button class="gift-close" id="closeGift">✕</button>
+
+    <div class="gift-scene">
+
+        <p class="gift-hint" id="giftHint">Slide the card open →</p>
+
+        <div class="letter-card" id="letterCard">
+
+    <div class="card-inside">
+
+        <div class="letter-pages" id="letterPages">
+
+            <div class="letter-page active">
+                <p class="letter-date">FOR MY BESTIEE 🐥</p>
+                <h3>Happy Birthday My Dear Chuziii urf Bestieee!! 🎂🥳✨</h3>
+                <div class="letter-body">
+                    <p>Sachi batau to... mujhe kabhi laga ich nai tha ki mai kisi ku bestie boltu… like maine bht dekha hai dusro ku batate hue ki wo meri bestiee hai and reels and all but mai aaj tak kisi ku bestie bola ich nai tha.. infact koi tha hi nai or na hi kisi k saath aisa bond feel hua.😭 .</p>
+                    <p>But idk aapke saath kb ye word itna natural feel hone laga ki ab aapku bestie bolte hue genuinely bht ich accha feel hota yro sachi mai. 🫶🏻✨</p>
+                </div>
+            </div>
+
+            <div class="letter-page">
+                <div class="letter-body">
+                    <p>Aap literally meri 1st bestieee hai.. aisa nai k frnds nai but aap jaisa bond kisi k saath nai hai or na kabhi bana.., and I’m genuinely so much happy k meri life mai ye title sbse pehle sbse best person <b>(jo k aap hai)</b> k naam hua 🥳🥳❤️ Or aap ich lst rehte i am sure 😌 </p>
+                    <p>nobody can replace u and mujhku bhi nai chaiye koi new bestiee westiee bla bla 🤮🤢😣... u r the bestttt and if best se koi accha word hota hai to wo bhi aap ich hai.. Bestt of the bestt!!😉🫠</p>
+                </div>
+            </div>
+
+            <div class="letter-page">
+                <div class="letter-body">
+                    <p>Aur ek cheez or jo i think uk and mai bht baar bola bhi hu shyd... k jb aap Buddy bolte na, pata nai kaiku but dil igdm ich garden garden hojata 🫣🫣🫶🌸😂 </p>
+                    <p>hao thik mai jaantu aap bole the k ye yr log ku bolte and normal hai but thik mujhe aap bolte to bht ich accha feel hota in short mst lgtaa 😅🫣✨</p>
+                </div>
+            </div>
+
+            <div class="letter-page">
+                <div class="letter-body">
+                    <p>And haan isliye ich i am very possessive abt u 😅 and peak level ki jealousy hoti mujhku i confess that 😅 like haan mujhe nai lgta accha koi ldka aapke bare mai bole ya baat krey to bs nai lgta accha gussa aata mn krta pglaae hue us ldke ki naak pr juta phek kr maru krke...😅😅 </p>
+                    <p>ya phir jb aap bhi kbhi krte kisi ki bt to bhi hoti jealousy or bht hoti😒😒 nxt level ka chidtu...😅 i think uk bcuz i can't control my jealousy just nai hoti mujhse soo... hehe nai hoti khtm🫣...</p>
+                </div>
+            </div>
+
+            <div class="letter-page">
+                <div class="letter-body">
+                    <p>Aap jo satate na... Taanga khichte, faltu ich irritate karte or bache ki jaan ledalte na 😭😂 and phir kbhi kbhi ittaa sweet bnte k mai shock hojatu... like ye which bachi hai!?.. 😅😅😂😂 </p>
+                    <p>But to be honest everything about our frndship is genuinely special and so sooo special for me..I had never found a friend ---> not just frnd---> best frnd <b>(Bestiee)</b> like u!! I am blessed.. alhumdulillah 💗😌🤌🏻🤌🏻</p>
+                </div>
+            </div>
+
+            <div class="letter-page">
+                <div class="letter-body">
+                    <p>And yeah... agr kbhi jaane anjaane me mai aapku hurt kiya hu and i think kiya tha maine kuch chizo pr🥺😔 so i am really sorry dear.... mai humesha aapko hurt krke khud ich bht pachtatu.. and i hope u will forgive me... </p>
+                    <p>mai kbhi aapku irritate kiya hu ya kuch aisa bol diya hu jo k aapku bura laggaya ho... to I’m genuinely sorry.🥺</p>
+                </div>
+            </div>
+
+            <div class="letter-page">
+                <div class="letter-body">
+                    <p>But haan as ur buddy dopey buntya!! Jo kuch bhi hu haq banta mera k aapku stau and irritate kru not too much but still 😅😅🤭🫣 and han iske liye mujhku kisi ki permission ki zrurt nai.. aapku jhelna ich pdta ye anyhow... </p>
+                    <p>Bcuz u r my one and only bestiee...😁😁</p>
+                </div>
+            </div>
+
+            <div class="letter-page">
+                <div class="letter-body">
+                    <p>And aap jo mujhku roz itta satate na uska koi sorry worry nai! 😤😂
+                        Uska hisaab alag se letu😜🫣🤣</p>
+                    <p>I honestly hope ki aap hamesha aise ich khush raheyn, haste raheyn, mujhe tang(pareshan) karte raheyn and apni ye pagalo wali but best🫣🤪 personality kbhi na badalne deyn😂✨</p>
+                </div>
+            </div>
+
+            <div class="letter-page">
+                <div class="letter-body">
+                    <p>Or life me kitti kich prob aaye... bs yd rakhye ki aapka buddy humesha aapke saath hai... </p>
+                    <p>shyd mai enough na rahu usku tackle krne ku (ik ispr aap kya bolte 🥲 k q enough nai rehtu krke but thik bhavnaao ko pakdye not height) but humesha available rehtu aapke liye... Hameshaa humeshaa!.. 😌🤗...... Jo bhi ho saath handle krenge Inshallah 😉🤝🏻✨</p>
+                </div>
+            </div>
+
+            <div class="letter-page">
+                <div class="letter-body">
+                    <p>Meri khuda se bht si duaen hai but i am telling u one of my special dua is k meri or mere bestiee ki dosti ko or gehri krey ise kisi ki nzr na lgne deyn and or acchi or mazbut kreyn... also ye k </p>
+                    <p>meri bestiee ko bhtt bhtt kamyabi ata krey apne buddy k saath saath 🫣😜 taake hum us success ku ek dusre se share krke saath me celebrate kreyn and uska maza double kr sakeyn... Ameeennnnnnnn ✨️✨️✨️✨️✨️✨</p>
+                </div>
+            </div>
+            
+            <div class="letter-page">
+                <div class="letter-body">
+                    <p>And aaj bday hai to ye duaen bhi leleyn😁(Bcuz mai bada hu or bade dil wala bhi 😌😇)</p>
+                    <p>Allah aapku dunya ki hr khushi dey... aapki hr jaiz tamanna puri krey... aapku phaltu logo se dur rakhe (siway mere 🫣)... aapko hamesha healthy rakhe... sukoon aur success dey. Ameen AMEEN <b>AMEEN!!! 🤲🏻✨</b></p>
+                    <p><b>Stay happy... stay blessed and keep annoying ur Dopey like this foreverrr!😂🫂</b></p>
+                
+                </div>
+            </div>
+            
+            <div class="letter-page">
+                <div class="letter-body">
+                    <p>Once again, Happiest Birthday Dear Chuziii! 🎂🎈🥳
+                        Keep smiling and keep being the same crazy Chuzi 🤪🐥</p>
+                    <p>I’m lucky enough to call u my BESTIEE like literally <b>MY BESTIEE 🫠 🫶🏻✨</b></p>
+                    <p>🍫🍭🍬🍬 aapka bday gift 😆😆😁😁</p>
+                </div>
+                <p class="letter-sign">— Buntyaa! 😵</p>
+                <button class="card-gift-btn hidden" id="birthdayGiftBtn">
+                    Your Bday Gift 🎁
+                </button>
+            </div>
+
+        </div>
+
+        <div class="page-dots" id="pageDots"></div>
+
+        <button class="page-arrow page-prev hidden" id="pagePrev">‹</button>
+        <button class="page-arrow page-next" id="pageNext">›</button>
+
+    </div>
+
+    <div class="card-cover" id="cardCover">
+        <div class="cover-face cover-front">
+            <div class="cover-emoji">🐥</div>
+            <p class="cover-title">For Chuzi</p>
+            <p class="cover-sub">slide to open →</p>
+        </div>
+        <div class="cover-face cover-back"></div>
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     GIFT BOX + CERTIFICATE
+     ========================= -->
+
+<div class="giftbox-panel hidden" id="giftboxPanel">
+
+    <canvas class="fireworks-canvas" id="fireworksCanvas"></canvas>
+
+    <canvas class="fireworks-canvas" id="fireworksCanvas"></canvas>
+
+    <button class="gift-close" id="closeGiftbox">✕</button>
+
+    <div class="giftbox-scene">
+
+        <p class="giftbox-hint" id="giftboxHint">Tap the gift 🎁</p>
+
+        <div class="giftbox" id="giftbox">
+            <div class="box-lid">
+                <div class="box-bow"></div>
+            </div>
+            <div class="box-body">
+                <div class="box-ribbon"></div>
+            </div>
+        </div>
+
+        <div class="certificate" id="certificate">
+
+            <img src="certificate.png"
+                 alt="Birthday Certificate"
+                 id="certificateImg" />
+
+            <div class="certificate-fallback">
+                <p class="cert-title">CERTIFICATE OF BESTIENESS</p>
+                <p class="cert-name">Awarded to: Chuzi 🐥</p>
+                <p class="cert-line">
+                    For being the most chaotic, caring, one-of-a-kind bestie.
+                </p>
+                <p class="cert-sign">— Dopey 😵</p>
+            </div>
+
+        </div>
+
+        <p class="giftbox-ending" id="giftboxEnding">
+            Happy Birthday, bestie. 🐥💛
+        </p>
+
+        <div class="end-actions hidden" id="endActions">
+    <button class="end-btn" id="readAgainBtn">💌 Read the card again</button>
+    <button class="end-btn end-btn-main" id="backToFilesBtn">🐥 Back to Chuzi Files</button>
+</div>
+
+    </div>
+
+    <div class="confetti-layer" id="giftConfetti"></div>
+
+</div>
+
+
+            <!-- =========================
+                 MEMORY ARCHIVE
+                 ========================= -->
+
+            <div class="memory-panel hidden" id="memoryPanel">
+
+                <div class="memory-top">
+
+                    <span>📖 MEMORY ARCHIVE</span>
+
+                    <button id="closeMemory">
+                        ✕
+                    </button>
+
+                </div>
+
+
+                <div class="memory-content">
+
+                    <div class="archive-label">
+                        PERSONAL ARCHIVE
+                    </div>
+
+                    <h3>
+                        Some memories don't need pictures. 🫶
+                    </h3>
+
+                    <p class="memory-intro">
+                        Just three little chapters from the story
+                        of how Chuzi & Dopey became... well... Chuzi & Dopey. 😂
+                    </p>
+
+
+                    <!-- =========================
+                         MEMORY 1
+                         ========================= -->
+
+                    <button class="memory-card" id="memory1">
+
+                        <div class="memory-number">
+                            #01
+                        </div>
+
+                        <div class="memory-card-text">
+
+                            <span class="memory-tag">
+                                THE BEGINNING
+                            </span>
+
+                            <h4>
+                                Hao... I still remember our 1st conversation. 😭
+                            </h4>
+
+                            <p>
+                                From a simple “Assalamalaikum Areeba Here”
+                                to somehow becoming besties...
+                            </p>
+
+                        </div>
+
+                        <span class="memory-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <!-- =========================
+                         MEMORY 2
+                         ========================= -->
+
+                    <button class="memory-card" id="memory2">
+
+                        <div class="memory-number">
+                            #02
+                        </div>
+
+                        <div class="memory-card-text">
+
+                            <span class="memory-tag">
+                                THE LEGACY
+                            </span>
+
+                            <h4>
+                                The Gossip Legacy™ 😂
+                            </h4>
+
+                            <p>
+                                Because apparently becoming comfortable
+                                with each other came with unlimited gossip.
+                            </p>
+
+                        </div>
+
+                        <span class="memory-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <!-- =========================
+                         MEMORY 3
+                         ========================= -->
+
+                    <button class="memory-card" id="memory3">
+
+                        <div class="memory-number">
+                            #03
+                        </div>
+
+                        <div class="memory-card-text">
+
+                            <span class="memory-tag">
+                                A LITTLE REAL
+                            </span>
+
+                            <h4>
+                                You actually made me feel good. 🫶
+                            </h4>
+
+                            <p>
+                                That one time you thought I was angry...
+                                and absolutely panicked. 😭
+                            </p>
+
+                        </div>
+
+                        <span class="memory-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <div class="archive-ending">
+
+                        <div>
+                            ────────
+                        </div>
+
+                        <p>
+                            Some memories don't need pictures
+                            to be remembered.
+                        </p>
+
+                        <div>
+                            ────────
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 FULL MEMORY VIEWER
+                 ========================= -->
+
+            <div class="full-memory hidden" id="fullMemory">
+
+                <div class="full-memory-box">
+
+                    <button class="full-memory-close" id="closeFullMemory">
+                        ✕
+                    </button>
+
+                    <span class="full-memory-number" id="fullMemoryNumber">
+                        MEMORY #01
+                    </span>
+
+                    <h3 id="fullMemoryTitle">
+                        The Beginning
+                    </h3>
+
+                    <div class="memory-divider">
+                        ✦
+                    </div>
+
+                    <p id="fullMemoryText">
+                    </p>
+
+                    <button class="next-memory" id="nextMemory">
+                        Next memory →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <p class="files-footer">
+                ⚠️ Maybe there's something for you waiting inside, Go and check!!.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
